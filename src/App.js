@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import CosmeticsListPage from './components/PageLayout/CosmeticsListPage';
+import SearchProvider from './state/search-context';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-Container" style={{width:"90vw",display:'flex',margin:"auto",justifyContent:"center",alignItems:"flex-start",height:"100vh"}}>
+        {/* <Header/> */}
+        <SearchProvider>
+          <CosmeticsListPage />
+        </SearchProvider>
+        {/* <Fotter/> */}
+      </div>
     </div>
   );
 }
