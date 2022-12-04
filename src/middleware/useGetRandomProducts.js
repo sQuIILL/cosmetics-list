@@ -44,7 +44,6 @@ const useGetRandomProducts = () => {
 
     const getTopProducts = () => {
         setIsLoading(true);
-        console.log("productky ",products)
         axios
             .get(`${BASE_URL}.json`, {
                 params: {
@@ -54,13 +53,10 @@ const useGetRandomProducts = () => {
             .then(response => {
                 const { data } = response;
                 data.length = data.length > PRODUCTS_COUNT ? PRODUCTS_COUNT : data.length;
-                console.log("data w then", data)
                 setProducts(data);
             });
-            console.log("productky2 ",products)
 
     };
-    console.log("productky3 ",products)
 
     useEffect(() => {
         setIsLoading(false);

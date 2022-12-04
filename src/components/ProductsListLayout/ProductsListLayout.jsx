@@ -4,9 +4,9 @@ import ProductCell from '../ProductCell/ProductCell'
 
 export default function ProductsListLayout() {
     const { products, isLoading } = useGetRandomProducts();
-    console.log(isLoading)
+    console.log(products)
     return (
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", flexWrap: "wrap",gap:"15px" }}>
             {products.length === 0 ? (
                 <>
                     noProducts
@@ -21,6 +21,9 @@ export default function ProductsListLayout() {
                             brand={product.brand}
                             imgUrl={product.api_featured_image}
                             price={product.price}
+                            type={product.product_type}
+                            category={product.category}
+                            currency={product.currency}
                         />
                     ))}
                 </>
