@@ -34,6 +34,7 @@ const useGetFilteredProducts = () => {
 
     useEffect(() => {
         getProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.filters]);
 
     return {
