@@ -1,5 +1,4 @@
 import React from 'react'
-import useGetProduct from '../../middleware/useGetProduct';
 import useGetRandomProducts from '../../middleware/useGetRandomProducts';
 import ProductsListLayout from '../ProductsListLayout/ProductsListLayout'
 

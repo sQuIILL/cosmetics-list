@@ -1,6 +1,5 @@
 import React from 'react'
 import useGetRandomProducts from '../../middleware/useGetRandomProducts';
-import { useSearchState } from '../../state/search-context';
 import ProductCell from '../ProductCell/ProductCell'
 
 export default function ProductsListLayout() {

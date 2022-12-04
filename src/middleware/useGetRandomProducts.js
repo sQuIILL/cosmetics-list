@@ -65,6 +65,7 @@ const useGetRandomProducts = () => {
     useEffect(() => {
         setIsLoading(false);
         getTopProducts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
