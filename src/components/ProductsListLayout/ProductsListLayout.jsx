@@ -26,6 +26,7 @@ export default function ProductsListLayout() {
                             bigImgUrl={product.image_link}
                             tagList={product.tag_list}
                             colors={product.product_colors}
+                            productLink={product.product_link}
                         />
                     ))}
                 </>
