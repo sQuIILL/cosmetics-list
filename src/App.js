@@ -6,7 +6,8 @@ function App() {
   return (
     <div className="App">
       <div className="App-Container"
-        style={{ width: "90vw", display: 'flex', margin: "auto", justifyContent: "center", alignItems: "flex-start", height: "100vh" }}
+        // style={{ width: "90vw", display: 'flex', margin: "auto", justifyContent: "center", alignItems: "flex-start", height: "100vh" }}
+        style={{padding:"0 6rem"}}
       >
         {/* <Header/> */}
         <SearchProvider>

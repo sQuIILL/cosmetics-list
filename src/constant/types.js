@@ -1,5 +1,9 @@
 export const TYPES = [
     {
+        name: 'all',
+        subCategories: []
+    },
+    {
         name: 'blush',
         subCategories: ['powder', 'cream'],
     },

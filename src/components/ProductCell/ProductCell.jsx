@@ -1,9 +1,9 @@
 import React from 'react'
 
-import capitalLetter from '../firstCapitalLetter/capitalLetter'
-import priceAndCurrency from '../price/priceAndCurrency'
 import ProductModal from '../ProductModal/ProductModal'
-import truncate from '../truncate/truncate'
+import capitalLetter from '../../tools/firstCapitalLetter/capitalLetter'
+import priceAndCurrency from '../../tools/price/priceAndCurrency'
+import truncate from '../../tools/truncate/truncate'
 
 import './productCell.css'
 

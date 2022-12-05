@@ -1,7 +1,7 @@
 import React from 'react'
 
-import capitalLetter from '../firstCapitalLetter/capitalLetter'
-import priceAndCurrency from '../price/priceAndCurrency'
+import capitalLetter from '../../tools/firstCapitalLetter/capitalLetter'
+import priceAndCurrency from '../../tools/price/priceAndCurrency'
 
 import './productModal.css'
 
@@ -21,7 +21,6 @@ export default function ProductModal({ productInfo:
             return 300;
         } else return 350;
     }
-
 
     return (
         <>

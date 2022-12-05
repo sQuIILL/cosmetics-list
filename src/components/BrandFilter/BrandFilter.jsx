@@ -11,12 +11,11 @@ export default function BrandFilter({ onChange }) {
     }
 
     return (
-        <ul>
+        <ul style={{ listStyle: "none" }}>
             {BRANDS.map(element => (
-                <li
-                    key={element}
-                    onClick={() => serveTypesAndCategory(element)}
-                >
+                <li key={element} style={{display:"flex"}}>
+                    <input key={element} type="radio" name="brands"
+                        onClick={() => serveTypesAndCategory(element)} />
                     {element}
                 </li>
             ))}

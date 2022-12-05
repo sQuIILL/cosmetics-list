@@ -31,7 +31,6 @@ const useGetRandomProducts = () => {
             });
 
     };
-    // console.log(getTopProducts)
     useEffect(() => {
         setIsLoading(false);
         getTopProducts();

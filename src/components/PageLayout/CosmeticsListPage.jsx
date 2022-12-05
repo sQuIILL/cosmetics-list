@@ -9,16 +9,14 @@ export default function CosmeticsListPage() {
     const { isLoading } = useGetFilteredProducts();
     return (
         <div
-            style={{ display: "flex", flex: "row", flexGrow: "1", }}
-        >
-            <div
-                style={{ width: "30%", }}
-            >
-                <Sidebar/>
+            style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(9,1fr)",
+            }}>
+            <div style={{ gridColumn: "1/3" }}>
+                <Sidebar />
             </div>
-            <div
-                style={{ width: "70%" }}
-            >
+            <div style={{ gridColumn: "3/10" }}>
                 {isLoading ?
                     <>ładuje się</>
                     :

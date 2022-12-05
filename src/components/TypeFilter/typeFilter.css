@@ -1,0 +1,19 @@
+.test {
+    -webkit-transition: height .3s ease;
+    height: 0;
+    overflow: hidden;
+    width: 200px;
+    background: red;
+    margin-top: 10px;
+  }
+  
+  input:checked + .test {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+  }
+  .checkboxForDropdown{
+    position: absolute;
+    top: 0;
+    right: 20px;
+  }
