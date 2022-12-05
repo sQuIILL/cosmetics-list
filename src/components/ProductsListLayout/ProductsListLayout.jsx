@@ -14,19 +14,20 @@ export default function ProductsListLayout() {
                 <>
                     {products.map(product => (
                         <ProductCell 
-                            key={product.id}
-                            id={product.id}
-                            name={product.name}
-                            brand={product.brand}
-                            imgUrl={product.api_featured_image}
-                            price={product.price}
-                            type={product.product_type}
-                            category={product.category}
-                            currency={product.currency}
-                            bigImgUrl={product.image_link}
-                            tagList={product.tag_list}
-                            colors={product.product_colors}
-                            productLink={product.product_link}
+                            productInfo={product}
+                            // key={product.id}
+                            // id={product.id}
+                            // name={product.name}
+                            // brand={product.brand}
+                            // imgUrl={product.api_featured_image}
+                            // price={product.price}
+                            // type={product.product_type}
+                            // category={product.category}
+                            // currency={product.currency}
+                            // bigImgUrl={product.image_link}
+                            // tagList={product.tag_list}
+                            // colors={product.product_colors}
+                            // productLink={product.product_link}
                         />
                     ))}
                 </>

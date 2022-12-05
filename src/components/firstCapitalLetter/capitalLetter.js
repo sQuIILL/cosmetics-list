@@ -1,5 +1,5 @@
 export default function capitalLetter(string) {
-    const nullValues = [null, "", " "]
+    const nullValues = [null, "", " ",undefined]
     return nullValues.includes(string) ?
         `unknown` :
         string.replace(/_/g, ' ').split(" ").map(

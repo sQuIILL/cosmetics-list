@@ -29,8 +29,6 @@ const useGetFilteredProducts = () => {
                 dispatch(setProducts(data));
                 setIsLoading(false);
             });
-            console.log(params)
-
     };
 
     useEffect(() => {

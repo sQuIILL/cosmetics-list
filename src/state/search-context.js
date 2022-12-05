@@ -7,7 +7,6 @@ const SearchStateContext = createContext('searchState');
 
 const SearchProvider = ({ children }) => {
     const [state, dispatch] = useReducer(searchReducer, { ...initialSearchState });
-    console.log(state)
     return <SearchStateContext.Provider value={[state, dispatch]}>{children}</SearchStateContext.Provider>;
 };
 

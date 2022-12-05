@@ -9,12 +9,12 @@ export default function CosmeticsListPage() {
     const { isLoading } = useGetFilteredProducts();
     return (
         <div
-            style={{ display: "flex", flex: "row", flexGrow: "1" }}
+            style={{ display: "flex", flex: "row", flexGrow: "1", }}
         >
             <div
                 style={{ width: "30%", }}
             >
-                <Sidebar></Sidebar>
+                <Sidebar/>
             </div>
             <div
                 style={{ width: "70%" }}

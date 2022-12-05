@@ -24,10 +24,10 @@ export default function Sidebar() {
     // };
     
     const handleOnSelect = (type,cat) => {
-        dispatch(setFilter('productType', type,));
-        console.log(type,cat)
+        dispatch(setFilter('productType', type));
+        // console.log(type,cat)
         if(cat!==null){
-            dispatch(setFilter('product_category', cat));
+            dispatch(setFilter('productCategory', cat));
         }
     };
     return (

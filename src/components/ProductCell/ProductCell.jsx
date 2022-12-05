@@ -6,25 +6,31 @@ import ProductModal from '../ProductModal/ProductModal'
 import truncate from '../truncate/truncate'
 
 import './productCell.css'
-export default function ProductCell(props) {
-  const productCellInfo = props;
-  const { name, brand, imgUrl, price, category, type, currency } = productCellInfo
 
+export default function ProductCell({ productInfo }) {
   const [open, setOpen] = React.useState(false);
 
   const openModal = () => {
     setOpen(true)
-  }
+  };
 
+  console.log(productInfo)
   return (
     <>
       <div className='productCellContainer' onClick={openModal}>
         <div style={{ float: 'left', fontSize: "24px", fontWeight: "500", marginBottom: "5px" }}>
-          {truncate(name, 38)}
+          {truncate(productInfo.name, 38)}
         </div>
         <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly" }}>
           <div style={{ width: "35%", }}>
-            <img src={imgUrl} alt={name} style={{ borderRadius: "50%", maxHeight: '190px', maxWidth: "170px" }} />
+            <img src={productInfo.api_featured_image}
+              alt={productInfo.name}
+              style={{ borderRadius: "50%", maxHeight: '190px', maxWidth: "170px" }}
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null;
+                currentTarget.src = productInfo.image_link;
+              }}
+            />
           </div>
           <div style={{ width: "65%", display: "flex", flexDirection: "column", alignItems: 'flex-start' }}>
             <div style={{ width: "100%", display: "flex", justifyContent: "space-evenly", }}>
@@ -35,25 +41,16 @@ export default function ProductCell(props) {
                 <div>Price:</div>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: '20px' }}>
-                <div>{capitalLetter(brand)}</div>
-                <div>{capitalLetter(category)}</div>
-                <div>{capitalLetter(type)}</div>
-                <div>{priceAndCurrency(price, currency)}</div>
+                <div>{capitalLetter(productInfo.brand)}</div>
+                <div>{capitalLetter(productInfo.category)}</div>
+                <div>{capitalLetter(productInfo.product_type)}</div>
+                <div>{priceAndCurrency(productInfo.price, productInfo.currency)}</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {open ? <ProductModal productInfo={props} setOpen={setOpen}/> : null}
+      {open ? <ProductModal productInfo={productInfo} setOpen={setOpen} /> : null}
     </>
   )
 }
-// key = { product.id }
-// id = { product.id }
-// name = { product.name }
-// brand = { product.brand }
-// imgUrl = { product.api_featured_image }
-// price = { product.price }
-// type = { product.product_type }
-// category = { product.category }
-// currency = { product.currency }

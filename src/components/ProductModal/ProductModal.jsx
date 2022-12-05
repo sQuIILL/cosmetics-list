@@ -5,13 +5,15 @@ import priceAndCurrency from '../price/priceAndCurrency'
 
 import './productModal.css'
 
-export default function ProductModal(props) {
-    const {id, name, brand, imgUrl, price, category, type, currency, bigImgUrl, tagList, colors, productLink } = props.productInfo;
+export default function ProductModal({ productInfo:
+    { id, name, brand, api_featured_image, price, category, product_type,
+        currency, image_link, tag_list, product_colors, product_link, description }
+    , setOpen }) {
 
-    const avaibleColors = colors.map(function (item) { return item["hex_value"]; });
-
+    const avaibleColors = product_colors.map(function (item) { return item["hex_value"]; });
+    console.log(id)
     const closeModal = () => {
-        props.setOpen(false);
+        setOpen(false);
     }
 
     const setImageHeight = () => {
@@ -32,11 +34,11 @@ export default function ProductModal(props) {
                     </div>
                     <div style={{ display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-evenly" }}>
                         <div >
-                            <img src={bigImgUrl} alt={name} height={setImageHeight(name)} maxWidth={500}
-                            style={{maxWidth:"400px"}}
+                            <img src={image_link} alt={name} height={setImageHeight(name)}
+                                style={{ maxWidth: "400px" }}
                                 onError={({ currentTarget }) => {
                                     currentTarget.onerror = null;
-                                    currentTarget.src = imgUrl;
+                                    currentTarget.src = api_featured_image;
                                 }}
                             />
                         </div>
@@ -48,13 +50,13 @@ export default function ProductModal(props) {
                                     <div>Type:</div>
                                     <div>Price:</div>
                                     <div>
-                                        <a href={productLink} style={{ color: "black" }}>Link to product</a>
+                                        <a href={product_link} style={{ color: "black" }}>Link to product</a>
                                     </div>
                                 </div>
                                 <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: '20px' }}>
                                     <div>{capitalLetter(brand)}</div>
                                     <div>{capitalLetter(category)}</div>
-                                    <div>{capitalLetter(type)}</div>
+                                    <div>{capitalLetter(product_type)}</div>
                                     <div>{priceAndCurrency(price, currency)}</div>
                                 </div>
                             </div>
@@ -73,7 +75,7 @@ export default function ProductModal(props) {
                     <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "0 50px", marginTop: "10px" }}>
                         <div>Tags:</div>
                         <div style={{ display: "flex", gap: "2px", flexWrap: "wrap" }}>
-                            {tagList.map((e) =>
+                            {tag_list.map((e) =>
                                 <div style={{ padding: "10px 15px", borderRadius: "10px", border: "1px solid grey" }}>{capitalLetter(e)}</div>
                             )}
                         </div>

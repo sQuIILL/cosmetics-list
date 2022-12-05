@@ -6,7 +6,6 @@ export default function TypesFilter({ onSelect }) {
 
   function serveTypesAndCategory(e, cat) {
     const value = e.target.innerText;
-    console.log(cat)
     onSelect(cat===null?null:cat.name, value);
   }
 
