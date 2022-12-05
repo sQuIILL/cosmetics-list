@@ -1,19 +1,52 @@
-.test {
+.test1,
+.test2,
+.test3,
+.test4,
+.test5,
+.test6,
+.test7,
+.test8 {
+    transition: height .3s ease;
     -webkit-transition: height .3s ease;
-    height: 0;
     overflow: hidden;
+    height: 0;
     width: 200px;
-    background: red;
     margin-top: 10px;
-  }
-  
-  input:checked + .test {
-    display: flex;
-    flex-direction: column;
-    height: 150px;
-  }
-  .checkboxForDropdown{
+}
+input:checked+.test1 {
+    height: 45px;
+}
+
+input:checked+.test2 {
+    height: 25px;
+}
+
+input:checked+.test3 {
+    height: 25px;
+}
+
+input:checked+.test4 {
+    height: 95px;
+}
+
+input:checked+.test5 {
+    height: 95px;
+}
+
+input:checked+.test6 {
+    height: 185px;
+}
+
+input:checked+.test7 {
+    height: 25px;
+}
+
+input:checked+.test8 {
+    height: 95px;
+}
+
+.checkboxForDropdown {
     position: absolute;
     top: 0;
     right: 20px;
-  }
+}

@@ -24,7 +24,7 @@ export default function ProductModal({ productInfo:
 
     return (
         <>
-            <div key={id} style={{ position: "fixed", top: "0", height: "100%", left: "0", right: "0", margin: "auto", backgroundColor: "grey", width: "100%", opacity: "0.7" }} onClick={closeModal} />
+            <div style={{ position: "fixed", top: "0", height: "100%", left: "0", right: "0", margin: "auto", backgroundColor: "grey", width: "100%", opacity: "0.7" }} onClick={closeModal} />
             <div key={id} style={{ position: "fixed", top: "0", bottom: "0", height: "550px", left: "0", right: "0", margin: "auto", backgroundColor: "white", width: "750px", borderRadius: '50px', boxShadow: "1px 2px 20px 1px " }}>
                 <div className='productModalContainer'>
                     <div style={{ fontSize: "32px", fontWeight: "500", marginBottom: "15px" }}>
@@ -61,11 +61,11 @@ export default function ProductModal({ productInfo:
                         </div>
                     </div>
                     {avaibleColors.length === 0 ? <></> :
-                        < div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "0 50px", marginTop: "10px" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: "10px", padding: "0 50px", marginTop: "10px" }}>
                             <div>Colors:</div>
                             <div style={{ display: "flex", gap: "2px", flexWrap: "wrap" }}>
                                 {avaibleColors.map((e) =>
-                                    <div style={{ backgroundColor: `${e}`, height: "30px", width: "30px" }} />
+                                    <div key={e}  style={{ backgroundColor: `${e}`, height: "30px", width: "30px" }} />
                                 )}
                             </div>
                         </div>
@@ -74,7 +74,7 @@ export default function ProductModal({ productInfo:
                         <div>Tags:</div>
                         <div style={{ display: "flex", gap: "2px", flexWrap: "wrap" }}>
                             {tag_list.map((e) =>
-                                <div style={{ padding: "10px 15px", borderRadius: "10px", border: "1px solid grey" }}>{capitalLetter(e)}</div>
+                                <div key={e} style={{ padding: "10px 15px", borderRadius: "10px", border: "1px solid grey" }}>{capitalLetter(e)}</div>
                             )}
                         </div>
                     </div>

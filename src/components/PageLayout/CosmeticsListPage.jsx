@@ -1,12 +1,11 @@
 import React from 'react'
-import useGetRandomProducts from '../../middleware/useGetRandomProducts';
 import useGetFilteredProducts from '../../middleware/useGetFilteredProducts';
 import ProductsListLayout from '../ProductsListLayout/ProductsListLayout'
 import Sidebar from '../Sidebar/Sidebar';
 
 export default function CosmeticsListPage() {
-    // const { isLoading } = useGetRandomProducts();
     const { isLoading } = useGetFilteredProducts();
+    
     return (
         <div
             style={{
