@@ -1,7 +1,7 @@
 import React from 'react'
 
 import capitalLetter from '../firstCapitalLetter/capitalLetter'
-import priceAndCurrency from '../Price/priceAndCurrency'
+import priceAndCurrency from '../price/priceAndCurrency'
 import ProductModal from '../ProductModal/ProductModal'
 import truncate from '../truncate/truncate'
 

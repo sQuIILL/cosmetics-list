@@ -21,7 +21,6 @@ const useGetFilteredProducts = () => {
             price_less_than: state.filters.maxPrice,
             product_category: state.filters.productCategory,
         };
-
         axios
             .get(`${BASE_URL}.json`, {
                 params,
@@ -30,12 +29,14 @@ const useGetFilteredProducts = () => {
                 dispatch(setProducts(data));
                 setIsLoading(false);
             });
+            console.log(params)
+
     };
 
     useEffect(() => {
         getProducts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [state.filters]);
+    }, [state.filters,state.filters.productCategory]);
 
     return {
         isLoading,
