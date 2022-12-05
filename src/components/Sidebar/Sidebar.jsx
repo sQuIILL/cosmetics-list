@@ -1,38 +1,35 @@
 import React from 'react'
 import { setFilter } from '../../state/actionCreators';
 import { useSearchState } from '../../state/search-context';
-import TagFilter from '../TypesFilter/TypesFilter';
+
+import BrandFilter from '../BrandFilter/BrandFilter';
+import PriceFilter from '../PriceFilter/PriceFilter';
+import TypeFilter from '../TypeFilter/TypeFilter';
 
 export default function Sidebar() {
     const [, dispatch] = useSearchState();
 
-    // const handleOnChange = e => {
-    //     const { name, value } = e.target;
-    //     dispatch(setFilter(name, value));
-    // };
-
-    // const handleType = value => {
-    //     console.log(value,)
-
-    //     dispatch(setFilter('product_type', value));
-    // };
-
-    // const handleTypeAndCategory = (type, cat) => {
-    //     console.log(type, cat, " ass")
-    //     dispatch(setFilter('product_type', type));
-    //     dispatch(setFilter('product_category', cat));
-    // };
-    
-    const handleOnSelect = (type,cat) => {
+    const handleOnSelect = (type, cat) => {
         dispatch(setFilter('productType', type));
-        // console.log(type,cat)
-        if(cat!==null){
+        if (cat !== null) {
             dispatch(setFilter('productCategory', cat));
         }
     };
+
+    const handleChange = (brand) => {
+        dispatch(setFilter('brand', brand));
+    }
+
+    const handleOnChange = e => {
+        const { name, value } = e.target;
+        dispatch(setFilter(name, value));
+    };
+
     return (
         <>
-            <TagFilter onSelect={handleOnSelect}/>
+            <PriceFilter onChange={handleOnChange} />
+            <TypeFilter onSelect={handleOnSelect} />
+            <BrandFilter onChange={handleChange} />
         </>
     )
 }

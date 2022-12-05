@@ -11,7 +11,6 @@ export default function ProductModal({ productInfo:
     , setOpen }) {
 
     const avaibleColors = product_colors.map(function (item) { return item["hex_value"]; });
-    console.log(id)
     const closeModal = () => {
         setOpen(false);
     }
@@ -26,7 +25,7 @@ export default function ProductModal({ productInfo:
 
     return (
         <>
-            <div style={{ position: "fixed", top: "0", height: "100%", left: "0", right: "0", margin: "auto", backgroundColor: "grey", width: "100%", opacity: "0.7" }} onClick={closeModal} />
+            <div key={id} style={{ position: "fixed", top: "0", height: "100%", left: "0", right: "0", margin: "auto", backgroundColor: "grey", width: "100%", opacity: "0.7" }} onClick={closeModal} />
             <div key={id} style={{ position: "fixed", top: "0", bottom: "0", height: "550px", left: "0", right: "0", margin: "auto", backgroundColor: "white", width: "750px", borderRadius: '50px', boxShadow: "1px 2px 20px 1px " }}>
                 <div className='productModalContainer'>
                     <div style={{ fontSize: "32px", fontWeight: "500", marginBottom: "15px" }}>

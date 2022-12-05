@@ -14,7 +14,6 @@ export default function ProductCell({ productInfo }) {
     setOpen(true)
   };
 
-  console.log(productInfo)
   return (
     <>
       <div className='productCellContainer' onClick={openModal}>
@@ -26,10 +25,6 @@ export default function ProductCell({ productInfo }) {
             <img src={productInfo.api_featured_image}
               alt={productInfo.name}
               style={{ borderRadius: "50%", maxHeight: '190px', maxWidth: "170px" }}
-              onError={({ currentTarget }) => {
-                currentTarget.onerror = null;
-                currentTarget.src = productInfo.image_link;
-              }}
             />
           </div>
           <div style={{ width: "65%", display: "flex", flexDirection: "column", alignItems: 'flex-start' }}>

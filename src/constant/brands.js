@@ -1,4 +1,5 @@
 export const BRANDS = [
+    'all',
     'almay',
     'alva',
     'anna sui',
