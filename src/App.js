@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import CosmeticsListPage from './components/PageLayout/CosmeticsListPage';
 import SearchProvider from './state/search-context';
@@ -14,7 +15,7 @@ function App() {
           <CosmeticsListPage />
         </SearchProvider>
       </div>
-      {/* <Fotter/> */}
+      <Footer/>
 
     </div>
   );

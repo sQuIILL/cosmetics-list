@@ -11,9 +11,10 @@ export default function Header() {
                     <div className="square1"></div>
                     <div className="square2"></div>
                     <div className="circle"></div>
-
                 </div>
-
+                <div style={{marginTop:"60px",zIndex:"10000000"}}>
+                    <h1>COSMETIC LIST</h1>
+                </div>
             </div>
         </div>
     )
