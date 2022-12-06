@@ -1,15 +1,16 @@
 # COSMETIC LIST SPA
-This project was bootstrapped with Create React App
+Project called "Cosmetic List" is single page application about displaying and filtering products from https://makeup-api.herokuapp.com/ using API,
+this project was bootstrapped with Create React App.
+
 In the project directory, you can run:
 
 npm install
 
 npm start
 
-Project called "Cosmetic List" is single page application about displaying and filtering products from https://makeup-api.herokuapp.com/ using API.
+##### When using the site, it is recommended to browse in resolution near 1700px. Application is not yet responsive.
 
-### When using the site, it is recommended to browse in resolution near 1700px. Application is not yet responsive.
-### Tech-Stack:
+#### Tech-Stack:
 React, Flexbox, Axios, Contex
 
 ## Author notes in polish.
@@ -24,7 +25,10 @@ Widzę kilka rzeczy do poprawnienia od najważniejszego priorytetu:
 2. Responsywność kompontentów produktu, w podglądzie może się zdażyć że będzie pusto i za dużo miejsca a na liście wyświetla sie maksymalnie 8 produktów(przy duzej rozdzielczości).
 3. Możliwość wyszukiwania marki aby szybciej odnaleźć produkt.
 
-No i jeszcze jest kilka mniejszych które można łatwo rozwiązać przy rozwijaniu tego projektu
+No i jeszcze jest kilka mniejszych które można łatwo rozwiązać przy rozwijaniu tego projektu.
+
 Dałem z siebie dużo a u mnie ambicje rosną wraz z zadaniami.
-Wolałbym pracować nad czymś co mnie rozwinie :D
+
+Wolałbym pracować nad czymś co mnie rozwinie. :D
+
 Dziękuje za przeczytanie notatki ;)
