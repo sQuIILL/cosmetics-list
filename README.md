@@ -3,6 +3,7 @@ This project was bootstrapped with Create React App
 In the project directory, you can run:
 
 npm install
+
 npm start
 
 Project called "Cosmetic List" is single page application about displaying and filtering products from https://makeup-api.herokuapp.com/ using API.
@@ -22,6 +23,7 @@ Widzę kilka rzeczy do poprawnienia od najważniejszego priorytetu:
 1. Paginacja, aktualnie strona może wyświetlać tylko 30 produktów a api pobiera wszystkie przez co dłużej ładuje się strona.
 2. Responsywność kompontentów produktu, w podglądzie może się zdażyć że będzie pusto i za dużo miejsca a na liście wyświetla sie maksymalnie 8 produktów(przy duzej rozdzielczości).
 3. Możliwość wyszukiwania marki aby szybciej odnaleźć produkt.
+
 No i jeszcze jest kilka mniejszych które można łatwo rozwiązać przy rozwijaniu tego projektu
 Dałem z siebie dużo a u mnie ambicje rosną wraz z zadaniami.
 Wolałbym pracować nad czymś co mnie rozwinie :D
