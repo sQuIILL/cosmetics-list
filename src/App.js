@@ -1,19 +1,21 @@
 import './App.css';
+import Header from './components/Header/Header';
 import CosmeticsListPage from './components/PageLayout/CosmeticsListPage';
 import SearchProvider from './state/search-context';
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <div className="App-Container"
-        style={{padding:"0 6rem"}}
+        style={{ padding: "0 6rem" }}
       >
-        {/* <Header/> */}
         <SearchProvider>
           <CosmeticsListPage />
         </SearchProvider>
-        {/* <Fotter/> */}
       </div>
+      {/* <Fotter/> */}
+
     </div>
   );
 }

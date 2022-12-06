@@ -1,0 +1,42 @@
+
+  .bodyss {
+    background: #222730;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bodyss > * {
+    position: absolute;
+  }
+  .rectangle{
+    width: 100vw;
+    height: 150px;
+    background: #4CAAB3;
+    margin-top: 0px;
+    margin-left: 790px;
+  }
+  .rectangle2{
+    width: 100vw;
+    height: 150px;
+    background: #4CAAB3;
+    margin-top: 0px;
+    margin-left: 4560px;
+  }
+  .square1 {
+    width: 250px;
+    height: 250px;
+    background: #222730;
+    transform: rotate(45deg);
+  }
+  .square2 {
+    width: 150px;
+    height: 150px;
+    background: #4CAAB3;
+    transform: rotate(45deg);
+  }
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #393E46;
+  }
