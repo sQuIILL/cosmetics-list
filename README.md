@@ -1,70 +1,28 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
+# COSMETIC LIST SPA
+This project was bootstrapped with Create React App
 In the project directory, you can run:
 
-### `npm start`
+npm install
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Project called "Cosmetic List" is single page application about displaying and filtering products from https://makeup-api.herokuapp.com/ using API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### When using the site, it is recommended to browse in resolution near 1700px. Application is not yet responsive.
+### Tech-Stack:
+React, Flexbox, Axios, Contex
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author notes in polish.
+Z powodu braku czasu zdecydowałem się na użycie inline-css. Było to dla mnie wygodniejsze i zaoszczędziło mi dużo czasu.
+Projekt był wymagający przez swoje endpointy i dane. Zdjęcia nie były ustandaryzowane a niestety nie miałem na tyle czasu aby skorzystać z bibliotek które ułatwiłyby mi z tym prace.
+Dużą zaletą bylo poznanie przy tym projekcie Contexu. Zdecydowanie latwiej się tak zarządza stanem aplikacji na mniejszej skali.
+Dużą wadą tego makeup-api jest to że cześć infromacji czyli takich jak np brand, type, categories trzeba samemu wpisać jako stałą wartość.
+Nie mogłem sprawdzić wszystkich produktów i w jaki sposób każdy się prezentuje.
+Uważam że najlepiej prezentują się produkty: "No Filter Foundation","Lippie Pencil".
+Widzę kilka rzeczy do poprawnienia od najważniejszego priorytetu:
+1. Paginacja, aktualnie strona może wyświetlać tylko 30 produktów a api pobiera wszystkie przez co dłużej ładuje się strona.
+2. Responsywność kompontentów produktu, w podglądzie może się zdażyć że będzie pusto i za dużo miejsca a na liście wyświetla sie maksymalnie 8 produktów(przy duzej rozdzielczości).
+3. Możliwość wyszukiwania marki aby szybciej odnaleźć produkt.
+No i jeszcze jest kilka mniejszych które można łatwo rozwiązać przy rozwijaniu tego projektu
+Dałem z siebie dużo a u mnie ambicje rosną wraz z zadaniami.
+Wolałbym pracować nad czymś co mnie rozwinie :D
+Dziękuje za przeczytanie notatki ;)

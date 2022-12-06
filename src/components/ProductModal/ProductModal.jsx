@@ -61,7 +61,7 @@ export default function ProductModal({ productInfo:
                         {avaibleColors.length === 0 ? <></> :
                             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
                                 <div style={{ fontSize: "18px" }}>Colors:</div>
-                                <div style={{ display: "flex", gap: "2px", flexWrap: "wrap" }}>
+                                <div style={{ display: "flex", gap: "2px", flexWrap: "wrap", marginRight: "20px" }}>
                                     {avaibleColors.map((e) =>
                                         <div key={e} style={{ backgroundColor: `${e}`, height: "20px", width: "20px" }} />
                                     )}
@@ -70,8 +70,8 @@ export default function ProductModal({ productInfo:
                         }
                         {tag_list.length === 0 ? <></> :
                             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "10px" }}>
-                                <div>Tags:</div>
-                                <div style={{ display: "flex", gap: "2px", flexWrap: "wrap" }}>
+                                <div style={{ fontSize: "18px" }}>Tags:</div>
+                                <div style={{ display: "flex", gap: "2px", flexWrap: "wrap", marginRight: "20px" }}>
                                     {tag_list.map((e) =>
                                         <div key={e} style={{ padding: "10px 15px", borderRadius: "10px", border: "1px solid grey" }}>{capitalLetter(e)}</div>
                                     )}
