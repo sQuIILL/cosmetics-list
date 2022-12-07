@@ -21,8 +21,13 @@ Dużą wadą tego makeup-api jest to że cześć infromacji czyli takich jak np 
 Nie mogłem sprawdzić wszystkich produktów i w jaki sposób każdy się prezentuje.
 Uważam że najlepiej prezentują się produkty: "No Filter Foundation","Lippie Pencil".
 Widzę kilka rzeczy do poprawnienia od najważniejszego priorytetu:
-1. Paginacja, aktualnie strona może wyświetlać tylko 30 produktów a api pobiera wszystkie przez co dłużej ładuje się strona.
+
+~~1. Paginacja, aktualnie strona może wyświetlać tylko 30 produktów a api pobiera wszystkie przez co dłużej ładuje się strona.~~
+        
+**Jest zrobiona prymitywna paginacja**
+
 2. Responsywność kompontentów produktu, w podglądzie może się zdażyć że będzie pusto i za dużo miejsca a na liście wyświetla sie maksymalnie 8 produktów(przy duzej rozdzielczości).
+
 3. Możliwość wyszukiwania marki aby szybciej odnaleźć produkt.
 
 No i jeszcze jest kilka mniejszych które można łatwo rozwiązać przy rozwijaniu tego projektu.
