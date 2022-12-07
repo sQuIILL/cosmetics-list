@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Pagination({ paginationState: [numberPagination, setNumberPagination] }) {
-    console.log(numberPagination)
     return (
         <div style={{ width: "100%", display: "flex", justifyContent: "center", margin: "20px 0" }}>
             {numberPagination === 0 ? null :
